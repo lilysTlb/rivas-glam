@@ -37,10 +37,6 @@
     font-size: 2.5rem;
     color: black;
 }
-.Historia{
-    display: flex;
-
-}
 /*nav*/
 .navbar {
     background-color: rgba(201, 190, 155, 1);
@@ -53,15 +49,19 @@
     transform: translateY(25%); 
     color: rgba(0, 0, 0, 0.74);
     z-index: 1100;
+    position: relative;
 }
 .navbar__menu {
     background-color: rgba(201, 190, 155, 1);
+    z-index: 900;
 }
 .navbar-collapse {
+    margin: -1.3rem -1rem;
     overflow: visible !important;
-    z-index: 1000;
+    z-index: 900;
 }
 .navbar__logo{
+    position: relative;
     border-radius: 100%;
     width: 139px;
     transform: translateY(20%); 
@@ -83,7 +83,43 @@
 .nav-link.nav-link--white:hover {
     border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
-
+/*footer*/
+footer {
+    background-color: rgba(224, 217, 192, 1);
+    text-align: center;
+    padding: 2rem 0rem 0rem;
+}
+footer h2{
+    color: rgba(0, 0, 0, 0.74);
+    font-family: 'Charmonman', sans-serif;
+    font-size: 60px;
+}
+footer h3{
+    font-family: "Vollkorn SC", serif;
+    font-size: 25px;
+}
+footer h5{
+    text-align: left;
+    color: aliceblue;
+    background-color:rgba(67, 59, 54, 1);
+    margin: 0px;
+    font-family: "Instrument Serif", serif;
+    font-size: 25px;
+}
+footer h4{
+    font-size: 20px;
+    font-family: "Zilla Slab", serif;
+}
+.footer-redes{
+    display: flex;
+    justify-content: center;
+}
+.footer-redes div{
+    margin: 1rem;
+}
+.footer-redes img{
+    height: 25px;
+}
 /*novedades*/
 .novedades{
     margin: 2rem;
@@ -95,7 +131,7 @@
 .carouselNOV .carousel-inner {
     background-color: #f3ede7;
     padding: 20px;
-    text-align: center; /
+    text-align: center;
 }
 .novedades .carousel-inner h2{
     font-family: "Julius Sans One", sans-serif;  
@@ -137,6 +173,201 @@ article h4 ~ p strong,
 article ul strong {
     font-family: "Inria Sans", sans-serif;
 }
+
+/*producciones*/
+.Producciones{
+    background-color: rgba(88, 75, 64, 1);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.Producciones h2 {
+    font-family: 'Tiro Devanagari Marathi', sans-serif;
+    font-style: italic;
+    color: aliceblue;
+    font-size: 70px;
+    border-bottom: 1px solid white;
+    display: inline-block; 
+    text-align: center; 
+    -webkit-text-stroke: 1px rgb(0, 0, 0); 
+}
+.carousel-producciones h2{ 
+    font-size: 50px;
+}
+/*nuestra historia*/
+.Nuestra-historia{
+    margin: 4rem 0rem;
+}
+.Historia{
+    display: flex;
+    padding: 2rem 4rem;
+}
+.Nuestra-historia h2{
+    font-family: 'Charmonman', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    text-align: center;
+}
+.Nuestra-historia p{
+    font-family: 'Tiro Kannada', sans-serif;
+    font-size: 18px;
+}
+.servicio{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem 5rem ; 
+}
+.servicio div img{
+    height: 311px;
+}
+.servicio div{
+    margin-right: 2rem;
+}
+.servicios h2{
+    margin-top: 5rem ;
+    font-family: "Julius Sans One", sans-serif;  
+    border-top: solid 1px rgba(98, 55, 5, 1);
+    border-bottom: solid 1px rgba(98, 55, 5, 1);
+    font-size: 50px;
+    color: rgba(71, 48, 0, 1);
+    text-align: center;
+    margin-bottom: 0;
+}
+.servicios>h3{
+    color: rgba(75, 75, 75, 1);
+    margin-top: 0;
+    font-family: 'Tillana', sans-serif;
+    font-size: 25px;
+    background: linear-gradient(to right,
+    #D5D5D5 1%,   /* este color ocupa hasta el 20% */
+    #ffffff 99%  );
+}
+.servicio h3{
+    font-family: "Italianno", cursive;
+    font-size: 32px;
+}
+.servicios p,.servicio h4{
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+}
+.servicio--titulo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(63, 41, 10, 0.69);
+    color: #f3ede7;
+    position: relative;   
+    margin: 1rem 0rem;
+}
+.ribbon {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+.ribbon {
+    --r: .8em;
+    
+    padding-right: calc(var(--r) + .25em);
+    line-height: 1.8;
+    clip-path: polygon(-100vw 0,100% 0,calc(100% - var(--r)) 50%,100% 100%,-100vw 100%);
+    border-image: conic-gradient(#FF6B6B 0 0) fill 0/100vw;
+    width: 90%;
+    height: 2.5rem;
+}
+
+/*contacto*/
+.introduccion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.introduccion img {
+    max-width: 450px;
+    box-shadow: rgba(0, 0, 0, 0.648) 1px 1px 10px;
+    border: solid black 2px;
+}
+
+.introduccion p {
+  max-width: 500px;
+  font-family: "Inter", sans-serif;;
+  font-size: 24px;
+  color: #444;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+}
+
+.info-comp{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly
+}
+.info {
+    background-color: #fff;
+    border-top: 1px solid #a09a9a;
+    border: solid black 1px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 3rem 0rem;
+}
+.info--item{
+    padding: 40px 20px;
+    text-align: center;
+    width: 300px;
+}
+.info h2{
+    font-family: "Joan", serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px 1px solid black;
+}
+
+.info p{
+  font-family: "Zilla Slab", serif;
+  font-size: 20px;
+    margin: 0px;
+}
+
+.motivador {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.motivador h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  text-align: center;
+
+}
+.motivador p{
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+  padding: 1rem 2rem;
+}
+
+.Contacto .material-symbols-outlined{
+    font-size: 40px;
+    font-weight: 200;
+    background-color: rgba(103, 80, 49, 1);
+    border-radius: 100%;
+    color: white;
+    padding: 10px;
+}
+.material-symbols-outlined.icon-contacto--dif{
+    background-color: white ;
+    border-radius: 100%;
+    color: rgba(103, 80, 49, 1);
+    border: solid 3px rgba(103, 80, 49, 1);
+}
 @media (min-width: 768px) and (max-width: 1024px) {
     .navbar-brand{
         transform: translateY(15%);
@@ -144,8 +375,8 @@ article ul strong {
 }
 @media (max-width: 768px) {
     .navbar-brand{
-        font-size: 35px;
-        transform: translateY(35%);
+        font-size: 48px;
+        transform: translateY(13%);
     }
     .navbar{
         height: 70px;
@@ -153,20 +384,21 @@ article ul strong {
     }
     .navbar__logo{
         width: 62px;
-        transform: translateY(20%); 
+        transform: translateY(13%);
+        z-index: 1100;
     }
     .nav-link{
         font-size: 15px;
     }
     .novedades .carousel-inner h2{  
-        font-size: 20px;
+        font-size: 30px;
         letter-spacing: 10px;
     }
     .novedades .carousel-inner h3{
-        font-size: 10px;
+        font-size: 15px;
     }
     .novedades .carousel-inner p{
-        font-size: 10px;
+        font-size: 14px;
     }
     .carouselNOV { 
         padding: 5px;      
@@ -181,5 +413,126 @@ article ul strong {
     .carouselNOV .carousel-item {
         min-height: 115px;  
     }
+    .horario{
+        margin: 1rem;
+    }
+    #produccionesCarousel{
+        margin: 1rem;
+    }
+    .Nuestra-historia img{
+        height: 232px;
+    }
+    .Nuestra-historia p{
+        font-size: 10px;
+        margin: 0;
+    }
+    .Nuestra-historia h2{
+        font-size: 35px;
+        font-weight: 500;
+    }
+    .Nuestra-historia{
+        margin: 2rem 0rem;
+    }
+    .Historia{
+        display: flex;
+        padding: 0rem 2rem;
+    }
+    footer {
+        padding: 1rem 0rem 0rem;
+    }
+    footer h2{
+        font-size: 30px;
+    }
+    footer h3{
+        font-size: 10px;
+    }
+    footer h5{
+        margin: 0px;
+        font-size: 10px;
+    }
+    footer h4{
+        font-size: 10px;
+    }
+    .footer-redes div{
+        margin: 0.5rem;
+    }
+    .footer-redes img{
+        height: 12px;
+    }
+    .servicio{
+        grid-template-columns: repeat(2, 1fr); 
+        margin: 0.5rem 1rem ; 
+    }
+    
+    .servicio div img{
+        height: auto;
+        width: 156px;
+    }
+    .servicios p,.servicio h4{
+        font-size: 12px;
+    }
+    .servicio h3{
+        font-family: "Italianno", cursive;
+        font-size: 20px;
+    }
+    
+    .ribbon {
+        height: 1.8rem;
+    }
+    
+    .servicios>h3{
+        font-size: 15px;
+    }
+    .introduccion {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
 
+    .introduccion img {
+        max-width: 225px;
+    }
+
+    .introduccion p {
+        max-width: 225px;
+        font-family: "Inter", sans-serif;;
+        font-size: 12px;
+    }
+    .info {
+        margin: 1rem 0rem;
+    }
+    .info--item{
+        padding: 20px 10px;
+        text-align: center;
+        width: 150px;
+    }
+    .info h2{
+        font-family: "Joan", serif;
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .info p{
+        font-size: 10px;
+        margin: 0px;
+    }
+
+    .motivador h3 {
+    font-size: 13px;
+
+    }
+    .motivador p{
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    padding: 0.5rem 1rem;
+    }
+
+    .Contacto .material-symbols-outlined{
+        font-size: 20px;
+        font-weight: 300;
+        padding: 5px;
+    }
+    .material-symbols-outlined.icon-contacto--dif{
+        border: solid 2px rgba(103, 80, 49, 1);
+    }
 }
